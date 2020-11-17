@@ -31,7 +31,7 @@ class Main(commands.Cog):
             async def on_raw_reaction_add(payload):
                 message_id = payload.message_id
                 if message_id == step1.id:
-                    if payload.emoji.name in "🇺🇸":
+                    if payload.emoji.name == '🇺🇸':
                         user = bot.get_user(payload.user_id)
                         print("Step 1 Completed:" + str(user))
                         await user.send(">>> **Step 2: Well Done Child. \n \n Try to solve this now:** \n 1 = Length "
